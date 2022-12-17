@@ -1,12 +1,31 @@
 const findMinimum = arr => {
+  let smallest = Infinity;
 
-  // Your code here
+  if (arr.length === 0) {
+    return undefined;
+  }
 
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] < smallest) {
+      smallest = arr[i];
+    }
+  }
+
+  return smallest;
 };
 
 const runningSum = arr => {
+  let res = [];
+  let sum = 0;
 
-  // Your code here
+  for (let i = 0; i < arr.length; i++) {
+    let num = arr[i];
+
+    sum += num;
+    res.push(sum);
+  }
+
+  return res;
 };
 
 const evenNumOfChars = arr => {
