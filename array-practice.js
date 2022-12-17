@@ -46,7 +46,7 @@ const smallerThanCurr = arr => {
   let counter = 0;
   for (let i = 0; i < arr.length; i++) {
     // console.log('counter: ', counter)
-    for (let j = i + 1; j < arr.length; j++) {
+    for (let j = 0; j < arr.length; j++) {
       //console.log('i: ', i, 'j: ', j);
       if (arr[j] < arr[i]) {
         counter += 1;
