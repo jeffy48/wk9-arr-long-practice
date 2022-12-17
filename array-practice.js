@@ -29,15 +29,37 @@ const runningSum = arr => {
 };
 
 const evenNumOfChars = arr => {
+  let res = arr.filter(word => word.length % 2 === 0);
 
-  // Your code here
+  // if (arr[i].length % 2 === 0) {
+  //   console.log(arr[i])
+  //   return true;
+  // }
+  return res.length;
 };
+
+// const arr = ['ab', 'abc', 'a', 'abcd'];
+// console.log(evenNumOfChars(arr)); // => 2
 
 const smallerThanCurr = arr => {
-
-  // Your code here
-
+  let res = [];
+  let counter = 0;
+  for (let i = 0; i < arr.length; i++) {
+    // console.log('counter: ', counter)
+    for (let j = i + 1; j < arr.length; j++) {
+      //console.log('i: ', i, 'j: ', j);
+      if (arr[j] < arr[i]) {
+        counter += 1;
+      }
+    }
+    res.push(counter);
+    counter = 0;
+  }
+  return res;
 };
+
+const arr = [8, 1, 2, 2, 3];
+console.log(smallerThanCurr(arr)); // => [4,0,1,1,3]
 
 const twoSum = (arr, target) => {
 
